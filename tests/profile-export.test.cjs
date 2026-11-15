@@ -49,4 +49,4 @@ assert.deepEqual(review, buildProfileReview([...variants].reverse(), preferred, 
 assert.equal(review.find(({ slot }) => slot === 'weapon-7').selected.id, 'case');
 assert.equal(buildProfileReview(variants, {}, glock).find(({ slot }) => slot === 'weapon-7').selected, null);
 assert.equal(buildProfileReview(variants, preferred, lotus).find(({ slot }) => slot === 'weapon-7').editor, lotus);
-console.log('20 portable collection export checks passed');
+console.log('23 portable collection export checks passed');
