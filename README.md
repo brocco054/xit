@@ -21,10 +21,20 @@ The native code under `internal/` is a separate legacy laboratory module. It cha
 
 The JSON collection export is for backup and sharing by companion tools. It is deliberately distinct from the native module's `.cfg` format and is not accepted by the native loader.
 
+## Build a standalone package
+
+On Windows with PowerShell and Node.js installed, run this from the repository root:
+
+```powershell
+.\tools\build-companion.ps1 -Version 1.0.0
+```
+
+The script runs the companion tests and creates a ZIP containing only the browser app, its static assets, the companion documentation, and a SHA-256 manifest. It rejects `.exe`, `.sys`, `.cfg`, `CS.dll`, and native loader artifacts in the companion payload.
+
 ## Tests
 
 Run the portable export tests with Node.js:
 
 ```sh
-node tests/profile-export.test.cjs
+node --test --test-isolation=none tests/profile-export.test.cjs
 ```
