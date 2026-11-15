@@ -1,0 +1,210 @@
+[
+  {
+    "id": "inheritance",
+    "definition": 7,
+    "kit": 1171,
+    "rarity": "Secreta",
+    "color": "#eb7979",
+    "collection": "The Kilowatt Collection"
+  },
+  {
+    "id": "case-hardened",
+    "definition": 7,
+    "kit": 44,
+    "rarity": "Confidencial",
+    "color": "#dc80eb",
+    "collection": "The Arms Deal Collection"
+  },
+  {
+    "id": "vulcan",
+    "definition": 7,
+    "kit": 302,
+    "rarity": "Secreta",
+    "color": "#eb7979",
+    "collection": "The Huntsman Collection"
+  },
+  {
+    "id": "slate",
+    "definition": 7,
+    "kit": 1035,
+    "rarity": "Restrita",
+    "color": "#ad91ff",
+    "collection": "The Snakebite Collection"
+  },
+  {
+    "id": "redline",
+    "definition": 7,
+    "kit": 282,
+    "rarity": "Confidencial",
+    "color": "#dc80eb",
+    "collection": "The Phoenix Collection"
+  },
+  {
+    "id": "asiimov",
+    "definition": 7,
+    "kit": 801,
+    "rarity": "Secreta",
+    "color": "#eb7979",
+    "collection": "The Danger Zone Collection"
+  },
+  {
+    "id": "7-724",
+    "definition": 7,
+    "kit": 724,
+    "rarity": "Secreta",
+    "color": "#eb4b4b",
+    "collection": "The St. Marc Collection"
+  },
+  {
+    "id": "7-921",
+    "definition": 7,
+    "kit": 921,
+    "rarity": "Secreta",
+    "color": "#eb4b4b",
+    "collection": "The 2021 Dust 2 Collection"
+  },
+  {
+    "id": "7-180",
+    "definition": 7,
+    "kit": 180,
+    "rarity": "Secreta",
+    "color": "#eb4b4b",
+    "collection": "The Bravo Collection"
+  },
+  {
+    "id": "60-326",
+    "definition": 60,
+    "kit": 326,
+    "rarity": "Confidencial",
+    "color": "#d32ce6",
+    "collection": "The Cobblestone Collection"
+  },
+  {
+    "id": "60-445",
+    "definition": 60,
+    "kit": 445,
+    "rarity": "Confidencial",
+    "color": "#d32ce6",
+    "collection": "The Chop Shop Collection"
+  },
+  {
+    "id": "60-1001",
+    "definition": 60,
+    "kit": 1001,
+    "rarity": "Secreta",
+    "color": "#eb4b4b",
+    "collection": "The Ancient Collection"
+  },
+  {
+    "id": "16-309",
+    "definition": 16,
+    "kit": 309,
+    "rarity": "Contrabando",
+    "color": "#e4ae39",
+    "collection": null
+  },
+  {
+    "id": "16-449",
+    "definition": 16,
+    "kit": 449,
+    "rarity": "Confidencial",
+    "color": "#d32ce6",
+    "collection": "The Gods and Monsters Collection"
+  },
+  {
+    "id": "1-37",
+    "definition": 1,
+    "kit": 37,
+    "rarity": "Restrita",
+    "color": "#8847ff",
+    "collection": "The Dust Collection"
+  },
+  {
+    "id": "1-757",
+    "definition": 1,
+    "kit": 757,
+    "rarity": "Restrita",
+    "color": "#8847ff",
+    "collection": "The Norse Collection"
+  },
+  {
+    "id": "61-1065",
+    "definition": 61,
+    "kit": 1065,
+    "rarity": "Confidencial",
+    "color": "#d32ce6",
+    "collection": "The 2021 Train Collection"
+  },
+  {
+    "id": "61-1027",
+    "definition": 61,
+    "kit": 1027,
+    "rarity": "Confidencial",
+    "color": "#d32ce6",
+    "collection": "The Control Collection"
+  },
+  {
+    "id": "4-38",
+    "definition": 4,
+    "kit": 38,
+    "rarity": "Restrita",
+    "color": "#8847ff",
+    "collection": "The Assault Collection"
+  },
+  {
+    "id": "4-437",
+    "definition": 4,
+    "kit": 437,
+    "rarity": "Confidencial",
+    "color": "#d32ce6",
+    "collection": "The Chop Shop Collection"
+  },
+  {
+    "id": "515-617",
+    "definition": 515,
+    "kit": 617,
+    "rarity": "Secreta",
+    "color": "#eb4b4b",
+    "collection": null
+  },
+  {
+    "id": "507-568",
+    "definition": 507,
+    "kit": 568,
+    "rarity": "Secreta",
+    "color": "#eb4b4b",
+    "collection": null
+  },
+  {
+    "id": "508-12",
+    "definition": 508,
+    "kit": 12,
+    "rarity": "Secreta",
+    "color": "#eb4b4b",
+    "collection": null
+  },
+  {
+    "id": "5030-10037",
+    "definition": 5030,
+    "kit": 10037,
+    "rarity": "Extraordinária",
+    "color": "#eb4b4b",
+    "collection": null
+  },
+  {
+    "id": "5030-10038",
+    "definition": 5030,
+    "kit": 10038,
+    "rarity": "Extraordinária",
+    "color": "#eb4b4b",
+    "collection": null
+  },
+  {
+    "id": "5030-10018",
+    "definition": 5030,
+    "kit": 10018,
+    "rarity": "Extraordinária",
+    "color": "#eb4b4b",
+    "collection": null
+  }
+]

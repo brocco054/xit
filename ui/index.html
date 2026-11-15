@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hy3x by brocco | Bancada de skins</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="preview.js" defer></script>
+  <script src="profile-export.js" defer></script>
+  <script src="preset-library.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="bar">
+    <div class="shell bar-content">
+      <a class="brand" href="./index.html" aria-label="Hy3x by brocco, início"><span class="mark" aria-hidden="true"></span>Hy3x by brocco</a>
+      <span class="bar-context">Counter-Strike 2</span>
+      <span class="session"><span aria-hidden="true"></span>Prévia local</span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="page-head">
+      <h1>Bancada de skins</h1>
+      <div class="weapon-label"><span>Em edição</span><strong id="weapon-name"></strong></div>
+    </div>
+
+    <nav class="categories" aria-label="Categorias da coleção" id="categories">
+      <button type="button" data-group="Todos" aria-pressed="true">Todos</button>
+      <button type="button" data-group="Rifles" aria-pressed="false">Rifles</button>
+      <button type="button" data-group="Pistolas" aria-pressed="false">Pistolas</button>
+      <button type="button" data-group="Facas" aria-pressed="false">Facas</button>
+      <button type="button" data-group="Luvas" aria-pressed="false">Luvas</button>
+    </nav>
+
+    <div class="workbench">
+      <aside class="panel library" aria-label="Biblioteca de acabamentos">
+        <div class="library-top">
+          <div class="switcher" aria-label="Origem da lista">
+            <button type="button" id="library-tab" aria-pressed="true">Coleção</button>
+            <button type="button" id="saved-tab" aria-pressed="false">Presets <span id="saved-count">0</span></button>
+          </div>
+          <label class="search"><span class="search-icon" aria-hidden="true"></span><input id="search" type="search" placeholder="Arma, acabamento ou ID" aria-label="Buscar arma, acabamento ou ID" aria-controls="items"></label>
+          <p id="result-count" class="result-count" role="status"></p>
+          <div id="backup-tools" class="backup-tools" hidden>
+            <button type="button" class="quiet" id="backup-export">Baixar backup</button>
+            <button type="button" class="quiet" id="backup-import">Importar backup</button>
+            <input type="file" id="backup-file" accept=".json,application/json" hidden>
+            <p id="backup-status" class="hint" role="status"></p>
+          </div>
+        </div>
+        <ul id="items" class="items" aria-label="Acabamentos disponíveis"></ul>
+      </aside>
+
+      <section class="inspection" aria-labelledby="finish-name">
+        <div class="stage">
+          <div class="stage-top">
+            <span id="preview-mode">Simulação 2D</span>
+            <div class="stage-controls">
+              <button type="button" id="compare" aria-pressed="false" aria-controls="compare-pane">Comparar A/B</button>
+              <button type="button" id="reference" aria-pressed="false">Ver original</button>
+              <button type="button" id="zoom" aria-pressed="false">Ampliar</button>
+            </div>
+          </div>
+          <div class="render-grid" id="render-grid">
+            <figure id="compare-pane" hidden>
+              <div class="render-frame">
+                <canvas id="compare-render" width="600" height="450" role="img" aria-label="Prévia da amostra A"></canvas>
+                <p id="compare-error" class="preview-error" role="status" hidden></p>
+              </div>
+              <figcaption><span id="compare-finish"></span><span id="compare-values"></span></figcaption>
+            </figure>
+            <figure>
+              <div class="render-frame">
+                <canvas id="render" width="600" height="450" role="img" aria-label="Prévia do acabamento"></canvas>
+                <p id="preview-error" class="preview-error" role="status" hidden></p>
+              </div>
+              <figcaption><span id="kit-badge"></span><span id="preview-values"></span></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="finish-info">
+          <div><span id="collection"></span><h2 id="finish-name"></h2></div>
+          <span class="rarity" id="rarity"></span>
+        </div>
+      </section>
+
+      <section class="panel inspector" aria-labelledby="inspector-title">
+        <header><h2 id="inspector-title">Ajustes do preset</h2><p>A simulação 2D aproxima o efeito do desgaste e do padrão.</p></header>
+        <form id="editor">
+          <div class="field name-field">
+            <label for="preset-name">Nome do preset</label>
+            <input id="preset-name" maxlength="80" autocomplete="off">
+            <p id="dirty-status" class="hint" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <div class="field-heading"><label for="wear">Desgaste</label><input id="wear-value" type="number" inputmode="decimal" step="any" required aria-label="Valor exato de desgaste"></div>
+            <input id="wear" type="range" step="any" aria-describedby="wear-condition">
+            <div class="wear-ticks" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="limits"><span id="wear-min"></span><span id="wear-max"></span></div>
+            <span id="wear-condition" class="condition"></span>
+          </div>
+          <div class="field seed-field">
+            <div class="field-heading"><label for="seed">Seed do padrão</label></div>
+            <div class="seed-row"><input id="seed" type="number" required min="1" max="1000" step="1" inputmode="numeric" aria-describedby="seed-hint"><button type="button" id="random">Sortear</button></div>
+            <p id="seed-hint" class="hint">Número inteiro de 1 a 1000.</p>
+          </div>
+          <div class="actions">
+            <button type="submit" id="save-preset" class="primary">Salvar preset</button>
+            <div id="saved-actions" class="inline-actions" hidden>
+              <button type="button" id="duplicate-preset" class="quiet">Duplicar</button>
+              <button type="button" id="delete-preset" class="quiet">Excluir</button>
+            </div>
+            <button type="button" id="export-profile" class="secondary">Revisar exportação</button>
+            <button type="button" id="reset" class="quiet">Restaurar ajustes</button>
+          </div>
+          <p id="status" role="status" class="status"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+  <dialog id="export-dialog" aria-labelledby="export-title">
+    <form id="export-form">
+      <h2 id="export-title">Revisar perfil</h2>
+      <p>O item em edição ocupa seu slot. Escolha um preset para cada conflito antes de baixar.</p>
+      <ul id="export-slots" class="export-slots"></ul>
+      <p id="export-status" class="hint" role="status"></p>
+      <div class="dialog-actions">
+        <button type="button" id="export-cancel" class="quiet">Voltar</button>
+        <button type="submit" id="export-confirm" class="primary">Baixar .cfg</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

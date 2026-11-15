@@ -1,0 +1,32 @@
+# Visual Studio cache / IDE state
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+
+# Build output / intermediates
+x64/
+[Bb]in/
+[Oo]bj/
+*.obj
+*.pch
+*.ipch
+*.pdb
+*.iobj
+*.ipdb
+*.ilk
+*.idb
+*.exp
+*.tlog
+*.log
+*.lastbuildstate
+*.recipe
+*.CppClean.log
+*.dll
+*.exe
+
+# Note: vendored static libs under sdk/includes/protobufs/lib/*.lib
+# are intentionally tracked (required to build) and not ignored here.
