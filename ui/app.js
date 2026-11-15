@@ -517,10 +517,15 @@ byId('export-form').addEventListener('submit', (event) => {
   const current = currentPreset();
   const review = buildProfileReview(saved.presets, saved.slots, current);
   if (review.some(({ editor, selected }) => !editor && !selected)) return;
-  const chosen = review.filter(({ editor }) => !editor).map(({ selected }) => selected.preset);
-  downloadJson(buildInternalProfile(chosen, current), `acervo-${selected.id}.cfg`);
-  dialog.close();
-  status.textContent = 'Perfil exportado. Carregue o arquivo na aba Perfis do módulo.';
+  const chosen = review.filter(({ editor }) => !editor).map(({ selected }) => selected);
+  try {
+    const collection = buildCollectionExport(chosen, current, nameInput.value, finishes);
+    downloadJson(collection, `acervo-${selected.id}-colecao.json`);
+    dialog.close();
+    status.textContent = 'Coleção exportada em JSON portátil. Ela não altera o cliente do jogo.';
+  } catch (error) {
+    exportStatus.textContent = error.message;
+  }
 });
 
 selectFinish(selected);

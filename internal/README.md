@@ -7,7 +7,7 @@
 </div>
 
 
-> **Disclaimer:** This project is for educational and research purposes. Using third-party software in online games may violate Terms of Service and result in bans. Use at your own risk.
+> **Legacy laboratory module:** This native DLL and loader are separate from the standalone Acervo Companion in `/ui`. They alter CS2 client state, require a local `-insecure` session, and are not part of the companion workflow. The companion neither loads this DLL nor changes the game process. No VAC or matchmaking compatibility is claimed.
 
 
 ## Table of Contents
