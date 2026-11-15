@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hy3x by brocco | Bancada de skins</title>
+  <title>Hy3x Acervo | Companion</title>
   <link rel="stylesheet" href="styles.css">
   <script src="catalog.js" defer></script>
   <script src="preview.js" defer></script>
@@ -15,8 +15,8 @@
   <header class="bar">
     <div class="shell bar-content">
       <a class="brand" href="./index.html" aria-label="Hy3x by brocco, início"><span class="mark" aria-hidden="true"></span>Hy3x by brocco</a>
-      <span class="bar-context">Counter-Strike 2</span>
-      <span class="session"><span aria-hidden="true"></span>Prévia local</span>
+      <span class="bar-context">Catálogo de acabamentos</span>
+      <span class="session"><span aria-hidden="true"></span>Aplicativo independente</span>
     </div>
   </header>
 
@@ -87,7 +87,7 @@
       </section>
 
       <section class="panel inspector" aria-labelledby="inspector-title">
-        <header><h2 id="inspector-title">Ajustes do preset</h2><p>A simulação 2D aproxima o efeito do desgaste e do padrão.</p></header>
+        <header><h2 id="inspector-title">Ajustes do preset</h2><p>Prévia visual ilustrativa. Esta bancada não modifica nem controla o cliente do jogo.</p></header>
         <form id="editor">
           <div class="field name-field">
             <label for="preset-name">Nome do preset</label>
@@ -112,7 +112,7 @@
               <button type="button" id="duplicate-preset" class="quiet">Duplicar</button>
               <button type="button" id="delete-preset" class="quiet">Excluir</button>
             </div>
-            <button type="button" id="export-profile" class="secondary">Revisar exportação</button>
+            <button type="button" id="export-profile" class="secondary">Exportar coleção</button>
             <button type="button" id="reset" class="quiet">Restaurar ajustes</button>
           </div>
           <p id="status" role="status" class="status"></p>
@@ -122,13 +122,13 @@
   </main>
   <dialog id="export-dialog" aria-labelledby="export-title">
     <form id="export-form">
-      <h2 id="export-title">Revisar perfil</h2>
-      <p>O item em edição ocupa seu slot. Escolha um preset para cada conflito antes de baixar.</p>
+      <h2 id="export-title">Exportar coleção</h2>
+      <p>O item em edição ocupa seu slot. Escolha um preset para cada conflito. O JSON gerado é um arquivo portátil de coleção; não é um perfil carregável pelo CS2.</p>
       <ul id="export-slots" class="export-slots"></ul>
       <p id="export-status" class="hint" role="status"></p>
       <div class="dialog-actions">
         <button type="button" id="export-cancel" class="quiet">Voltar</button>
-        <button type="submit" id="export-confirm" class="primary">Baixar .cfg</button>
+        <button type="submit" id="export-confirm" class="primary">Baixar JSON</button>
       </div>
     </form>
   </dialog>
