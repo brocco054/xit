@@ -1,4 +1,6 @@
-# Testar o Hy3x by brocco no CS2
+# Testar o módulo nativo legado do Hy3x no CS2
+
+> **Documento de laboratório legado.** Estas instruções descrevem somente o módulo nativo separado em `internal/`, que modifica estado do cliente e exige sessão local `-insecure`. Elas não descrevem o Hy3x Acervo Companion. A bancada atual exporta JSON portátil de coleção e não gera mais `.cfg` para o módulo nativo.
 
 O painel Hy3x by brocco abre no mapa local. A aba **Coleção** permite escolher, visualizar e aplicar os acabamentos. O painel no navegador continua disponível para exportar perfis.
 
@@ -33,7 +35,7 @@ Os pares de modelo e acabamento do catálogo foram conferidos pelos arquivos de 
 ## 1. Colocar um perfil na pasta (opcional)
 
 1. Copie o [perfil pronto da AK-47 Case Hardened](../acervo-case-hardened.cfg) para `C:\vc\configs\` no ambiente de laboratório. Ele usa seed `857` e desgaste `0,24`. Se já houver um arquivo de mesmo nome, preserve-o e dê outro nome ao perfil de teste, como `acervo-case-hardened-857.cfg`.
-2. Para testar outra combinação, abra `ui/index.html` no navegador, ajuste os valores e clique em **Exportar para o módulo**. O exportador inclui os presets salvos, com um acabamento por arma, uma faca e uma luva. A seleção atual tem prioridade no seu slot.
+2. Para este teste legado, use somente um perfil de laboratório previamente preparado, como `acervo-case-hardened.cfg`. A bancada atual em `ui/index.html` exporta JSON portátil e não produz arquivos consumidos pelo módulo nativo.
 
 ## 2. Abrir o mapa no laboratório
 
